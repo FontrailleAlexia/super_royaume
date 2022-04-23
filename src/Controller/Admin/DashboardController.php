@@ -2,17 +2,18 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Title;
 use App\Entity\Animal;
-use App\Entity\Artisanat;
 use App\Entity\Autres;
-use App\Entity\Aventure;
 use App\Entity\Machine;
+use App\Entity\Aventure;
+use App\Entity\Artisanat;
 use App\Entity\Production;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
-use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
-use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -39,5 +40,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Aventure', 'fas fa-cloud', Aventure::class);
         yield MenuItem::linkToCrud('Machine', 'fas fa-fax', Machine::class);
         yield MenuItem::linkToCrud('Production', 'fas fa-umbrella', Production::class);
+        yield MenuItem::linkToCrud('Title', 'fas fa-umbrella', Title::class);
     }
 }

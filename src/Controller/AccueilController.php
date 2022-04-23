@@ -2,11 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Title;
 use App\Entity\Animal;
-use App\Entity\Artisanat;
 use App\Entity\Autres;
-use App\Entity\Aventure;
 use App\Entity\Machine;
+use App\Entity\Aventure;
+use App\Entity\Artisanat;
 use App\Entity\Production;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,6 +34,8 @@ class AccueilController extends AbstractController
         $aventure = $this->entityManager->getRepository(Aventure::class)->findAll();
         $machine = $this->entityManager->getRepository(Machine::class)->findAll();
         $production = $this->entityManager->getRepository(Production::class)->findAll();
+        $title = $this->entityManager->getRepository(Title::class)->findAll();
+
 
         return $this->render('accueil/index.html.twig', [
             'animal' => $animal,
@@ -41,6 +44,7 @@ class AccueilController extends AbstractController
             'aventure' => $aventure,
             'machine' => $machine,
             'production' => $production,
+            'title' => $title,
         ]);
     }
 }

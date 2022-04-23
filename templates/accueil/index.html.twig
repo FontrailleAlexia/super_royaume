@@ -5,48 +5,101 @@
 {% block body %}
 
 	<ul class="title_list_sr">
-		<li>Animal</li>
-		<li>Artisanat</li>
-		<li>Autres</li>
-		<li>Aventure</li>
-		<li>Machine</li>
-		<li>Production</li>
+		{% for title in title %}
+			<li><h5>{{ title.name }}</h5></li>
+		{% endfor %}
 	</ul>
 	<div class="list_super_royaume">
 		<div class="animal">
 			{% for animal in animal %}
-				<h5>{{ animal.name }}</h5>
+				<span class="animal_name">
+					{{ animal.name }}
+				</span>
+				<span class="animal_number">
+					<input type="text" value="{{ animal.actuel }}" size="5"> - 
+					<input type="text" value="{{ animal.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ animal.max - animal.actuel }}" size="5" disabled>
+				<i class="fa-solid fa-check"></i>
+				<i class="fa-solid fa-xmark"></i>				
+				</span>
+				<br><br>
 			{% endfor %}
 		</div>
 		
-		<div class="artisanat">
+		<!--<div class="artisanat">
 			{% for artisanat in artisanat %}
-				<h5>{{ artisanat.name }}</h5>
+				<span class="artisanat_name">
+					{{ artisanat.name }}
+				</span>
+				<span class="artisanat_number">
+					<input type="text" value="{{ artisanat.actuel }}" size="5"> - 
+					<input type="text" value="{{ artisanat.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ artisanat.max - artisanat.actuel }}" size="5" disabled>
+				</span>
+				<br><br>			
 			{% endfor %}
 		</div>
 
 		<div class="autres">
 			{% for autres in autres %}
-				<h5>{{ autres.name }}</h5>
+				<span class="autres_name">
+					{{ autres.name }}
+				</span>
+				<span class="autres_number">
+					<input type="text" value="{{ autres.actuel }}" size="5"> - 
+					<input type="text" value="{{ autres.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ autres.max - autres.actuel }}" size="5" disabled>
+				</span>
+				<br><br>			
 			{% endfor %}
 		</div>
 
 		<div class="aventure">
 			{% for aventure in aventure %}
-				<h5>{{ aventure.name }}</h5>
+				<span class="aventure_name">
+					{{ aventure.name }}
+				</span>
+				<span class="aventure_number">
+					<input type="text" value="{{ aventure.actuel }}" size="5"> - 
+					<input type="text" value="{{ aventure.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ aventure.max - aventure.actuel }}" size="5" disabled>
+				</span>
+				<br><br>			
 			{% endfor %}
 		</div>
 
 		<div class="machine">
 			{% for machine in machine %}
-				<h5>{{ machine.name }}</h5>
+				<span class="machine_name">
+					{{ machine.name }}
+				</span>
+				<span class="machine_number">
+					<input type="text" value="{{ machine.actuel }}" size="5"> - 
+					<input type="text" value="{{ machine.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ machine.max - machine.actuel }}" size="5" disabled>
+				</span>
+				<br><br>
 			{% endfor %}
 		</div>
 
 		<div class="production">
 			{% for production in production %}
-				<h5>{{ production.name }}</h5>
+				<span class="production_name">
+					{{ production.name }}
+				</span>
+				<span class="production_number">
+					<input type="text" value="{{ production.actuel }}" size="5"> - 
+					<input type="text" value="{{ production.max }}" disabled size="5">
+					=
+					<input type="text" value="{{ production.max - production.actuel }}" size="5" disabled>
+				</span>
+				<br><br>
 			{% endfor %}
-		</div>
+		</div>-->
 	</div>
 {% endblock %}
