@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    background: linear-gradient(to right, #D06224 70%, #E9C891);
+    padding: 2rem 2rem 0 2rem;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: 'Square Peg', cursive;
+}
+
+.connection_inscription {
+    display: flex;
+}
+
+.connection {
+    margin-right: 2rem;
+}
+
+.title_list_sr {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.title_list_sr li {
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: #E9C891;
+    border-radius: 50%;
+    border: solid 1px black;
+    font-family: 'Square Peg', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.title_list_sr li:hover {
+    background: linear-gradient(to right, #D06224, #E9C891);
+}
+
+.list_super_royaume {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.animal, 
+.artisanat, 
+.autres, 
+.aventure, 
+.machine, 
+.production {
+    margin-right: 2rem;
+    padding: 1rem;
+    background-color: #86C01B;
+}
+
+/*
+
+#D06224
+#AE431E
+#8A8635
+#E9C891
